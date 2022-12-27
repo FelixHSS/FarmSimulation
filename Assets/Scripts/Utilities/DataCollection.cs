@@ -18,7 +18,7 @@ public class ItemDetails
     [field: SerializeField]
     public int ItemUseRadius { get; set; }
     [field: SerializeField]
-    public bool CanPickedup { get; set; }
+    public bool CanPicked { get; set; }
     [field: SerializeField]
     public bool CanDropped { get; set; }
     [field: SerializeField]
