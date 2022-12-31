@@ -6,7 +6,7 @@ public class ItemDetails
     [field: SerializeField]
     public int ItemID { get; set; }
     [field: SerializeField]
-    public string Name { get; set; }
+    public string ItemName { get; set; }
     [field: SerializeField]
     public ItemType ItemType { get; set; }
     [field: SerializeField]

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemDetailsList>k__BackingField:
   - <ItemID>k__BackingField: 1001
-    <Name>k__BackingField: Axe
+    <ItemName>k__BackingField: Axe
     <ItemType>k__BackingField: 4
     <ItemIcon>k__BackingField: {fileID: 21300000, guid: 3714c3e6b5e3d498ebcd06d432b3dd89, type: 3}
     <ItemOnWorldSprite>k__BackingField: {fileID: 0}
     <ItemDescription>k__BackingField: It is a pretty simple axe
     <ItemUseRadius>k__BackingField: 1
-    <CanPickedup>k__BackingField: 1
+    <CanPicked>k__BackingField: 0
     <CanDropped>k__BackingField: 0
     <CanCarried>k__BackingField: 0
     <ItemPrice>k__BackingField: 0
