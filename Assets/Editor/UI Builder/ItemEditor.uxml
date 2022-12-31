@@ -5,7 +5,7 @@
                 <ui:Label text="Items" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 20px;" />
                 <ui:Button text="+" display-tooltip-when-elided="true" style="-unity-text-align: middle-left; align-items: stretch;" />
             </ui:VisualElement>
-            <ui:ListView focusable="true" name="ListView" reorderable="true" show-border="true" style="flex-grow: 1;" />
+            <ui:ListView focusable="true" name="ListView" reorderable="true" show-border="true" fixed-item-height="60" style="flex-grow: 1;" />
         </ui:VisualElement>
         <ui:ScrollView name="ItemDetails" style="flex-grow: 1; width: 70%;">
             <ui:VisualElement name="Header" style="flex-direction: row; justify-content: space-between;">
@@ -18,8 +18,8 @@
                     <ui:VisualElement name="Container" style="flex-direction: row; align-items: center;">
                         <ui:VisualElement name="Icon" style="background-image: url(&apos;project://database/Assets/M%20Studio/Art/Items/Icons/icon_M.png?fileID=2800000&amp;guid=ef065fb65f97e43f8b673d7718f87178&amp;type=3#icon_M&apos;); width: 80px; height: 80px; margin-left: 5px; margin-right: 5px;" />
                         <ui:VisualElement name="Gerneral" style="flex-grow: 1; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
-                            <uie:IntegerField label="ID" value="0" name="itemID" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
-                            <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="itemName" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
+                            <uie:IntegerField label="ID" value="0" name="ItemID" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
+                            <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" name="ItemName" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
                             <uie:EnumField label="Type" name="ItemType" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
                             <uie:ObjectField label="Icon" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="ItemIcon" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
                             <uie:ObjectField label="OnWorld Sprite" type="UnityEngine.Sprite, UnityEngine.CoreModule" name="ItemSprite" style="padding-left: 3px; padding-right: 3px; padding-top: 3px; padding-bottom: 3px; -unity-text-align: middle-left;" />
