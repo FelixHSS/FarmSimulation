@@ -56,9 +56,29 @@ public class ItemEditor : EditorWindow
 
         IconPreview = ItemDetailsSection.Q<VisualElement>("Icon");
 
+        //find buttons
+        root.Q<Button>("AddButton").clicked += OnAddItemClicked;
+        root.Q<Button>("DeleteButton").clicked += OnDeleteClicked;
+
         LoadDatabase();
 
         GenerateListView();
+    }
+
+    private void OnDeleteClicked()
+    {
+        ItemList.Remove(ActiveItem);
+        ItemListView.Rebuild();
+        ItemDetailsSection.visible = false;
+    }
+
+    private void OnAddItemClicked()
+    {
+        ItemDetails newItem = new ItemDetails();
+        newItem.ItemName = "NEW ITEM";
+        newItem.ItemID = 1000 + ItemList.Count;
+        ItemList.Add(newItem);
+        ItemListView.Rebuild();
     }
 
     private void LoadDatabase()
@@ -159,8 +179,8 @@ public class ItemEditor : EditorWindow
             ActiveItem.ItemUseRadius = evt.newValue;
         });
 
-        ItemDetailsSection.Q<Toggle>("CanPickedup").value = ActiveItem.CanPicked;
-        ItemDetailsSection.Q<Toggle>("CanPickedup").RegisterValueChangedCallback(evt =>
+        ItemDetailsSection.Q<Toggle>("CanPicked").value = ActiveItem.CanPicked;
+        ItemDetailsSection.Q<Toggle>("CanPicked").RegisterValueChangedCallback(evt =>
         {
             ActiveItem.CanPicked = evt.newValue;
         });
