@@ -76,7 +76,7 @@ public class ItemEditor : EditorWindow
     {
         ItemDetails newItem = new ItemDetails();
         newItem.ItemName = "NEW ITEM";
-        newItem.ItemID = 1000 + ItemList.Count;
+        newItem.ItemID = 1001 + ItemList.Count;
         ItemList.Add(newItem);
         ItemListView.Rebuild();
     }
@@ -104,7 +104,7 @@ public class ItemEditor : EditorWindow
         {
             if (i < ItemList.Count)
             {
-                if (ItemList[i].ItemIcon!= null)
+                if (ItemList[i].ItemIcon != null)
                     e.Q<VisualElement>("Icon").style.backgroundImage = ItemList[i].ItemIcon.texture;
                 e.Q<Label>("Name").text = ItemList[i] == null ? "NO NAME" : ItemList[i].ItemName;
             };
