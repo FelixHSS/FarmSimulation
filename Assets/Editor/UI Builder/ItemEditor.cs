@@ -145,6 +145,7 @@ public class ItemEditor : EditorWindow
         });
 
         IconPreview.style.backgroundImage = ActiveItem.ItemIcon == null ? DefaultIcon.texture : ActiveItem.ItemIcon.texture;
+        ItemDetailsSection.Q<ObjectField>("ItemIcon").value = ActiveItem.ItemIcon;
         ItemDetailsSection.Q<ObjectField>("ItemIcon").RegisterValueChangedCallback(evt =>
         {
             Sprite newIcon = evt.newValue as Sprite;
