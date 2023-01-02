@@ -29,3 +29,12 @@ public class ItemDetails
     [field: SerializeField]
     public float SellPercentage { get; set; }
 }
+
+[System.Serializable]
+public struct InventoryItem
+{
+    [field: SerializeField]
+    public int ItemID { get; set; }
+    [field: SerializeField]
+    public int ItemAmount { get; set; }
+}
