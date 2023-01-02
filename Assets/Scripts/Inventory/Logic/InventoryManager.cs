@@ -17,6 +17,20 @@ namespace Farm.Inventory
         {
             return ItemDataList_SO.ItemDetailsList.Find(item => item.ItemID == ID);
         }
+
+        /// <summary>
+        /// Add the item to player's bag
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="toDestory">if need to destroy the item</param>
+        public void AddItem(Item item, bool toDestory)
+        {
+            Debug.Log(item.ItemDetails.ItemID + "Name: " + item.ItemDetails.ItemName);
+            if (toDestory)
+            {
+                Destroy(item.gameObject);
+            }
+        }
     }
 }
 

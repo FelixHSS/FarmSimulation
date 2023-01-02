@@ -10,7 +10,7 @@ namespace Farm.Inventory
         public int ItemID { get; set; }
         private SpriteRenderer SpriteRenderer { get; set; }
         private BoxCollider2D BoxCollider2D { get; set; }
-        private ItemDetails ItemDetails { get; set; }
+        public ItemDetails ItemDetails { get; set; }
 
         private void Awake()
         {
