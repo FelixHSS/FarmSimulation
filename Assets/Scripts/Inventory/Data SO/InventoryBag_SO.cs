@@ -6,5 +6,5 @@ using UnityEngine;
 public class InventoryBag_SO : ScriptableObject
 {
     [field: SerializeField]
-    public List<InventoryItem> InventoryItemList { get; set; }
+    public List<InventoryItem> ItemList { get; set; }
 }

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3abde4539f7aca342b39b5fb31c6f531, type: 3}
   m_Name: PlayerBag
   m_EditorClassIdentifier: 
-  <InventoryItemList>k__BackingField:
+  <ItemList>k__BackingField:
   - <ItemID>k__BackingField: 1007
+    <ItemAmount>k__BackingField: 2
+  - <ItemID>k__BackingField: 1008
     <ItemAmount>k__BackingField: 1
-  - <ItemID>k__BackingField: 0
-    <ItemAmount>k__BackingField: 0
   - <ItemID>k__BackingField: 0
     <ItemAmount>k__BackingField: 0
   - <ItemID>k__BackingField: 0

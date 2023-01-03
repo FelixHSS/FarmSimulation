@@ -19,7 +19,7 @@ namespace Farm.Inventory
         /// <returns></returns>
         public ItemDetails GetItemDetails(int ID)
         {
-            return ItemDataList_SO.ItemDetailsList.Find(item => item.ItemID == ID);
+            return ItemDataList_SO.ItemDetailsList.Find(itemDetails => itemDetails.ItemID == ID);
         }
 
         /// <summary>
@@ -29,16 +29,70 @@ namespace Farm.Inventory
         /// <param name="toDestory">if need to destroy the item</param>
         public void AddItem(Item item, bool toDestory)
         {
-            InventoryItem newItem = new InventoryItem();
-            newItem.ItemID = item.ItemID;
-            newItem.ItemAmount = 1;
-
-            PlayerBag.InventoryItemList[0] = newItem;
+            AddItem(item.ItemID, 1);
 
             Debug.Log(item.ItemDetails.ItemID + "Name: " + item.ItemDetails.ItemName);
             if (toDestory)
             {
                 Destroy(item.gameObject);
+            }
+        }
+
+        /// <summary>
+        /// Check if player's bag has an empoty slot
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckBagCapacity()
+        {
+            for (int i = 0; i < PlayerBag.ItemList.Count; i++)
+            {
+                if (PlayerBag.ItemList[i].ItemID == 0)
+                    return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Find the position of the item in the bag
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns>-1 means the item doesn't exist in the bag</returns>
+        private int GetItemIndexInBag(int ID)
+        {
+            for (int i = 0; i < PlayerBag.ItemList.Count; i++)
+            {
+                if (PlayerBag.ItemList[i].ItemID == ID) 
+                    return i;
+            }
+            return -1;
+        }
+
+        /// <summary>
+        /// Add a specific amount of the item to player's bag
+        /// </summary>
+        /// <param name="ID">the ID of the item that need to be added in player's bag</param>
+        /// <param name="amount"></param>
+        private void AddItem(int ID, int amount)
+        {
+            int itemPosition = GetItemIndexInBag(ID);
+
+            if (itemPosition == -1 && CheckBagCapacity()) // the item is not in player's bag and the bag has an empty slot
+            {
+                InventoryItem item = new InventoryItem { ItemID = ID, ItemAmount = amount };
+                for (int i = 0; i < PlayerBag.ItemList.Count; i++)
+                {
+                    if (PlayerBag.ItemList[i].ItemID == 0)
+                    {
+                        PlayerBag.ItemList[i] = item;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                InventoryItem item = PlayerBag.ItemList[itemPosition];
+                item.ItemAmount += amount;
+                PlayerBag.ItemList[itemPosition] = item;
             }
         }
     }
