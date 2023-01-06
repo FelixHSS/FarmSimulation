@@ -14,9 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemList>k__BackingField:
   - <ItemID>k__BackingField: 1007
-    <ItemAmount>k__BackingField: 2
+    <ItemAmount>k__BackingField: 4
   - <ItemID>k__BackingField: 1008
-    <ItemAmount>k__BackingField: 1
+    <ItemAmount>k__BackingField: 2
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
+  - <ItemID>k__BackingField: 0
+    <ItemAmount>k__BackingField: 0
   - <ItemID>k__BackingField: 0
     <ItemAmount>k__BackingField: 0
   - <ItemID>k__BackingField: 0

@@ -12,6 +12,12 @@ namespace Farm.Inventory
         [field: Header("Player Bag Data")]
         [field: SerializeField]
         public InventoryBag_SO PlayerBag { get; set; }
+
+        private void Start()
+        {
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, PlayerBag.ItemList);
+        }
+
         /// <summary>
         /// Get item details using item ID
         /// </summary>
@@ -36,6 +42,9 @@ namespace Farm.Inventory
             {
                 Destroy(item.gameObject);
             }
+
+            // update UI
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, PlayerBag.ItemList);
         }
 
         /// <summary>
