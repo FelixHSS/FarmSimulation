@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 9044173108990559806}
   - component: {fileID: 1288131317713560669}
   - component: {fileID: 4028270560088018511}
+  - component: {fileID: 898290795882559200}
   m_Layer: 5
   m_Name: Slot_Bag
   m_TagString: Untagged
@@ -245,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -257,7 +258,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -276,6 +277,38 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &898290795882559200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239427180145342777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f98b0e80c8d184d85b56d951cc33fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <SlotImage>k__BackingField: {fileID: 4539998892147475929}
+  <AmountText>k__BackingField: {fileID: 4231030036730512048}
+  <SlotHighlight>k__BackingField: {fileID: 2032775713612010084}
+  <Button>k__BackingField: {fileID: 4028270560088018511}
+  <SlotType>k__BackingField: 0
+  <IsSelected>k__BackingField: 0
+  <ItemDetails>k__BackingField:
+    <ItemID>k__BackingField: 0
+    <ItemName>k__BackingField: 
+    <ItemType>k__BackingField: 0
+    <ItemIcon>k__BackingField: {fileID: 0}
+    <ItemOnWorldSprite>k__BackingField: {fileID: 0}
+    <ItemDescription>k__BackingField: 
+    <ItemUseRadius>k__BackingField: 0
+    <CanPicked>k__BackingField: 0
+    <CanDropped>k__BackingField: 0
+    <CanCarried>k__BackingField: 0
+    <ItemPrice>k__BackingField: 0
+    <SellPercentage>k__BackingField: 0
+  <ItemAmount>k__BackingField: 0
 --- !u!1 &6969514595774187320
 GameObject:
   m_ObjectHideFlags: 0
