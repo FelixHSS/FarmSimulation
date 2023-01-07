@@ -87,7 +87,7 @@ namespace Farm.Inventory
 
             if (itemPosition == -1 && CheckBagCapacity()) // the item is not in player's bag and the bag has an empty slot
             {
-                InventoryItem item = new InventoryItem { ItemID = ID, ItemAmount = amount };
+                InventoryItem item = new() { ItemID = ID, ItemAmount = amount };
                 for (int i = 0; i < PlayerBag.ItemList.Count; i++)
                 {
                     if (PlayerBag.ItemList[i].ItemID == 0)

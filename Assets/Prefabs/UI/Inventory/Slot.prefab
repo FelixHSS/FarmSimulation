@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 5183258727084390678}
   - component: {fileID: 4791575533932207425}
   - component: {fileID: 2032775713612010084}
+  - component: {fileID: 1399626056976759674}
   m_Layer: 5
   m_Name: Highlight
   m_TagString: Untagged
@@ -152,6 +153,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1399626056976759674
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185166736015594932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 204775f87280e2f419fb20c68b6215fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &6239427180145342777
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +330,7 @@ MonoBehaviour:
     <ItemPrice>k__BackingField: 0
     <SellPercentage>k__BackingField: 0
   <ItemAmount>k__BackingField: 0
+  <SlotIndex>k__BackingField: 0
 --- !u!1 &6969514595774187320
 GameObject:
   m_ObjectHideFlags: 0

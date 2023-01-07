@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace Farm.Inventory
 {
@@ -10,6 +11,7 @@ namespace Farm.Inventory
         [field:SerializeField] private GameObject BagUI { get; set; }
         [field: SerializeField] private SlotUI[] PlayerSlots { get; set; }
         private bool IsBagOpen { get; set; }
+        private int SelectedSlotIndex { get; set; } = 0;
 
         private void OnEnable()
         {
@@ -61,10 +63,43 @@ namespace Farm.Inventory
             }
         }
 
+        /// <summary>
+        /// Click event of BagButton
+        /// </summary>
         public void ToggleBagUI()
         {
             IsBagOpen = !IsBagOpen;
             BagUI.SetActive(IsBagOpen);
+        }
+
+        public void ToggleSlotHighlight(int slotIndex)
+        {
+
+            /*if (SelectedSlotIndex == -1)
+            {
+                PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(true);
+                SelectedSlotIndex = slotIndex;
+            }
+            else
+            {
+                if (SelectedSlotIndex != slotIndex)
+                {
+                    PlayerSlots[SelectedSlotIndex].SlotHighlight.gameObject.SetActive(false);
+                    PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(true);
+                    SelectedSlotIndex = slotIndex;
+                }
+                else
+                {
+
+                }
+            }*/
+            PlayerSlots[SelectedSlotIndex].SlotHighlight.gameObject.SetActive(false);
+            PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(PlayerSlots[slotIndex].IsSelected);
+            if (SelectedSlotIndex != slotIndex)
+            {
+                PlayerSlots[SelectedSlotIndex].IsSelected = false;
+            }
+            SelectedSlotIndex = slotIndex;
         }
     }
 }
