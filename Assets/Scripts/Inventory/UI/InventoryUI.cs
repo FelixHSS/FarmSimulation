@@ -6,7 +6,10 @@ namespace Farm.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [field: Header("UI of player's bag")]
+        [field:SerializeField] private GameObject BagUI { get; set; }
         [field: SerializeField] private SlotUI[] PlayerSlots { get; set; }
+        private bool IsBagOpen { get; set; }
 
         private void OnEnable()
         {
@@ -17,6 +20,7 @@ namespace Farm.Inventory
         {
             EventHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
         }
+
         private void Start()
         {
             // initialize slot index
@@ -24,7 +28,18 @@ namespace Farm.Inventory
             {
                 PlayerSlots[i].SlotIndex = i;
             }
+
+            IsBagOpen = BagUI.activeInHierarchy;
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                ToggleBagUI();
+            }
+        }
+
         private void OnUpdateInventoryUI(InventoryLocation location, List<InventoryItem> items)
         {
             switch (location)
@@ -44,6 +59,12 @@ namespace Farm.Inventory
                     }
                     break;
             }
+        }
+
+        public void ToggleBagUI()
+        {
+            IsBagOpen = !IsBagOpen;
+            BagUI.SetActive(IsBagOpen);
         }
     }
 }
