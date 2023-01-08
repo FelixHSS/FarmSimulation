@@ -15,7 +15,7 @@ namespace Farm.Inventory
         private void Awake()
         {
             SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            BoxCollider2D= GetComponent<BoxCollider2D>();
+            BoxCollider2D = GetComponent<BoxCollider2D>();
         }
 
         private void Start()
@@ -37,7 +37,8 @@ namespace Farm.Inventory
                 SpriteRenderer.sprite = ItemDetails.ItemOnWorldSprite != null ? ItemDetails.ItemOnWorldSprite : ItemDetails.ItemIcon;
 
                 // adjust collider box size to adapt to the item size
-                Vector2 newSize = new Vector2(SpriteRenderer.sprite.bounds.size.x, SpriteRenderer.sprite.bounds.size.y);
+                Vector2 newSize = new(SpriteRenderer.sprite.bounds.size.x,
+                                      SpriteRenderer.sprite.bounds.size.y);
                 BoxCollider2D.size = newSize;
                 BoxCollider2D.offset = new Vector2(0, SpriteRenderer.sprite.bounds.center.y); //may change later
             }

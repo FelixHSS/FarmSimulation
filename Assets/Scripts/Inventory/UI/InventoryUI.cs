@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
+using UnityEngine.UI;
 
 namespace Farm.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [field: Header("Dragged Item")]
+        [field: SerializeField] public Image draggedItem { get; set; }
         [field: Header("UI of player's bag")]
         [field:SerializeField] private GameObject BagUI { get; set; }
         [field: SerializeField] private SlotUI[] PlayerSlots { get; set; }
@@ -74,25 +76,6 @@ namespace Farm.Inventory
 
         public void ToggleSlotHighlight(int slotIndex)
         {
-
-            /*if (SelectedSlotIndex == -1)
-            {
-                PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(true);
-                SelectedSlotIndex = slotIndex;
-            }
-            else
-            {
-                if (SelectedSlotIndex != slotIndex)
-                {
-                    PlayerSlots[SelectedSlotIndex].SlotHighlight.gameObject.SetActive(false);
-                    PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(true);
-                    SelectedSlotIndex = slotIndex;
-                }
-                else
-                {
-
-                }
-            }*/
             PlayerSlots[SelectedSlotIndex].SlotHighlight.gameObject.SetActive(false);
             PlayerSlots[slotIndex].SlotHighlight.gameObject.SetActive(PlayerSlots[slotIndex].IsSelected);
             if (SelectedSlotIndex != slotIndex)

@@ -104,6 +104,22 @@ namespace Farm.Inventory
                 PlayerBag.ItemList[itemPosition] = item;
             }
         }
+
+        /// <summary>
+        /// In the range of player's bag
+        /// </summary>
+        /// <param name="fromIndex"></param>
+        /// <param name="toIndex"></param>
+        public void SwapItemsInPlayerBag(int fromIndex, int toIndex)
+        {
+            InventoryItem currentItem = PlayerBag.ItemList[fromIndex];
+            InventoryItem targetItem = PlayerBag.ItemList[toIndex];
+
+            PlayerBag.ItemList[fromIndex] = targetItem;
+            PlayerBag.ItemList[toIndex] = currentItem;
+
+            EventHandler.CallUpdateInventoryUI(InventoryLocation.Player, PlayerBag.ItemList);
+        }
     }
 }
 
