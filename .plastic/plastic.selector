@@ -1,0 +1,4 @@
+repository "FarmSimulation@Play_for_Fun@cloud"
+  path "/"
+    br "/main"
+    co "/main"
