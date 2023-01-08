@@ -1,4 +1,0 @@
-repository "FarmSimulation@CreateForFun@cloud"
-  path "/"
-    smartbranch "/main" 
-     
