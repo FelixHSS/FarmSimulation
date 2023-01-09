@@ -6,7 +6,9 @@ public static class Settings
 {
     private const float fadeDuration = 0.35f;
     private const float targetAlpha = 0.45f;
+    private const float tooltipOffset = 50;
 
     public static float FadeDuration => fadeDuration;
     public static float TargetAlpha => targetAlpha;
+    public static float TooltipOffset => tooltipOffset;
 }

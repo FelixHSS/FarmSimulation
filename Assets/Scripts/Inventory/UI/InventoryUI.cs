@@ -7,6 +7,7 @@ namespace Farm.Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        [field: SerializeField] public ToolTip ToolTip { get; set; }
         [field: Header("Dragged Item")]
         [field: SerializeField] public Image draggedItem { get; set; }
         [field: Header("UI of player's bag")]

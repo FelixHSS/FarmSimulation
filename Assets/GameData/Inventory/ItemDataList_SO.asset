@@ -95,8 +95,8 @@ MonoBehaviour:
     <CanPicked>k__BackingField: 1
     <CanDropped>k__BackingField: 0
     <CanCarried>k__BackingField: 1
-    <ItemPrice>k__BackingField: 0
-    <SellPercentage>k__BackingField: 0
+    <ItemPrice>k__BackingField: 20
+    <SellPercentage>k__BackingField: 0.4
   - <ItemID>k__BackingField: 1008
     <ItemName>k__BackingField: Pumpkin Seed
     <ItemType>k__BackingField: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     <CanPicked>k__BackingField: 1
     <CanDropped>k__BackingField: 0
     <CanCarried>k__BackingField: 1
-    <ItemPrice>k__BackingField: 0
-    <SellPercentage>k__BackingField: 0
+    <ItemPrice>k__BackingField: 30
+    <SellPercentage>k__BackingField: 0.6
   - <ItemID>k__BackingField: 1009
     <ItemName>k__BackingField: Chili Seed
     <ItemType>k__BackingField: 0

@@ -15,8 +15,8 @@ namespace Farm.Inventory
         [field: SerializeField] public SlotType SlotType { get; set; }
         [field: Header("Item Info")]
         [field: SerializeField] internal bool IsSelected { get; set; }
-        [field: SerializeField] private ItemDetails ItemDetails { get; set; }
-        [field: SerializeField] private int ItemAmount { get; set; }
+        [field: SerializeField] internal ItemDetails ItemDetails { get; private set; }
+        [field: SerializeField] internal int ItemAmount { get; private set; }
         [field: SerializeField] public int SlotIndex { get; set; }
         
         private InventoryUI InventoryUI => GetComponentInParent<InventoryUI>();
