@@ -14,3 +14,13 @@ public enum InventoryLocation
 {
     Player, Box
 }
+
+public enum ActionType
+{
+    None, Carry, Hoe, Break
+}
+
+public enum CharacterPart
+{
+    Body, Hair, Arm, Tool
+}
