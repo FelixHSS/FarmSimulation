@@ -39,7 +39,7 @@ public class AnimatorOverride : MonoBehaviour
             _ => ActionType.None
         };
 
-        if (!isSelected)
+        if (!isSelected || !itemDetails.CanCarried)
         {
             currentType = ActionType.None;
             HeldItem.enabled = false;

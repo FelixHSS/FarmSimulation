@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 namespace Farm.Inventory
 {
-    public class SlotUI : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class SlotUI : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [field: Header("Retrive Components")]
         [field: SerializeField] private Image ItemImage { get; set; }
@@ -65,7 +65,7 @@ namespace Farm.Inventory
             ItemDetails = new();
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData eventData)
         {
             if (ItemAmount == 0) return;
             IsSelected = !IsSelected;

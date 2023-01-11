@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3984853005442823243}
   - component: {fileID: 6104206196019793758}
   - component: {fileID: 2250695068343391306}
+  - component: {fileID: 1608141874569923712}
   m_Layer: 0
   m_Name: TreeYellow
   m_TagString: Untagged
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.08, y: 1.7401075}
   m_EdgeRadius: 0
+--- !u!210 &1608141874569923712
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3984853005442823244}
+  m_Enabled: 1
+  m_SortingLayerID: -1457566509
+  m_SortingLayer: 8
+  m_SortingOrder: 0
 --- !u!1 &3984853006419270150
 GameObject:
   m_ObjectHideFlags: 0
