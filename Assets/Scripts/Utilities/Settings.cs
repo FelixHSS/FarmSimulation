@@ -12,7 +12,7 @@ public static class Settings
     public static float FadeDuration => fadeDuration;
     public static float TargetAlpha => targetAlpha;
     public static float TooltipOffset => tooltipOffset;
-    public static float SecondThreshold => 0.1f;
+    public static float SecondThreshold => 0.01f;
     public static int SecondsPerMinute => 60;
     public static int MinutesPerHour => 60;
     public static int HoursPerDay => 24;
