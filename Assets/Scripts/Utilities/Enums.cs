@@ -24,3 +24,8 @@ public enum CharacterPart
 {
     Body, Hair, Arm, Tool
 }
+
+public enum Season
+{
+    Spring, Summer, Fall, Winter
+}
