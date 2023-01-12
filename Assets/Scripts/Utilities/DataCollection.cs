@@ -38,3 +38,11 @@ public struct InventoryItem
     [field: SerializeField]
     public int ItemAmount { get; set; }
 }
+
+[System.Serializable]
+public class AnimatorType
+{
+    [field: SerializeField] public CharacterPart CharacterPart { get; set; }
+    [field: SerializeField] public ActionType ActionType { get; set; }
+    [field: SerializeField] public AnimatorOverrideController OverrideController { get; set; }
+}

@@ -7,4 +7,5 @@ public class InventoryBag_SO : ScriptableObject
 {
     [field: SerializeField]
     public List<InventoryItem> ItemList { get; set; }
+    // may change to dictionary
 }
