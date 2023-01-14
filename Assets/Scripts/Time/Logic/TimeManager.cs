@@ -109,6 +109,6 @@ public class TimeManager : MonoBehaviour
             }
             EventHandler.CallGameMinuteEvent(GameMinute, GameHour);
         }
-        Debug.Log("Second: " + GameSecond + " Minute: " + GameMinute);
+        //Debug.Log("Second: " + GameSecond + " Minute: " + GameMinute);
     }
 }
