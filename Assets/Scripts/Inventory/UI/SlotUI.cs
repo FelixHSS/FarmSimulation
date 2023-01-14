@@ -127,7 +127,11 @@ namespace Farm.Inventory
             {
                 if (ItemDetails.CanDropped)
                 {
+                    var posotion = Camera.main.ScreenToWorldPoint(new(Input.mousePosition.x,
+                                                                      Input.mousePosition.y,
+                                                                      -Camera.main.transform.position.z));
 
+                    EventHandler.CallInstantiateItemInScene(ItemDetails.ItemID, posotion);
                 }
             }
         }
