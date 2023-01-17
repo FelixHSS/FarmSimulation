@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class SwitchBounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void Start()
+    private void OnEnable()
     {
-        SwitchConfinerShape();
+        EventHandler.AfterSceneLoadedEvent += SwitchConfinerShape;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.AfterSceneLoadedEvent -= SwitchConfinerShape;
     }
 
     private void SwitchConfinerShape()

@@ -40,9 +40,14 @@ namespace Farm.Transition
         /// <returns></returns>
         private IEnumerator Transition(string sceneName, Vector3 targetPosition)
         {
+            EventHandler.CallBeforeSceneUnloadEvent();
+
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
 
             yield return LoadSceneSetActive(sceneName);
+            EventHandler.CallMoveToPositionEvent(targetPosition);
+
+            EventHandler.CallAfterSceneLoadedEvent();
         }
 
         /// <summary>
