@@ -7,6 +7,7 @@ namespace Farm.Transition
 {
     public class TransitionManager : MonoBehaviour
     {
+        [field: SceneName]
         [field: SerializeField] public string StartSceneName { get; set; } = string.Empty;
 
         private void OnEnable()

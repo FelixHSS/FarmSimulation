@@ -6,6 +6,7 @@ namespace Farm.Transition
 {
     public class Teleport : MonoBehaviour
     {
+        [field: SceneName]
         [field: SerializeField] public string SceneToGo { get; set; }
         [field: SerializeField] public Vector3 PositionToGo { get; set; }
 
